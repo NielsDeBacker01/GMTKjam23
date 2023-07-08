@@ -23,6 +23,8 @@ public class ChargeControls : MonoBehaviour
     private float extendFreeze;
     [SerializeField]
     private float launchPower;
+    [SerializeField]
+    private Rigidbody2D rb;
     private float launchChargeMultiplier;
 
     private states currentState;
@@ -39,7 +41,8 @@ public class ChargeControls : MonoBehaviour
         switch (currentState)
         {
             case states.Neutral:
-                GetComponent<BoxCollider2D>().enabled = true;
+                GetComponent<BoxCollider2D>().isTrigger = false;
+                rb.mass = 1;
                 if(Input.GetKey(KeyCode.Space))
                 {
                     currentState = states.Charging;
@@ -59,6 +62,8 @@ public class ChargeControls : MonoBehaviour
                 {
                     currentState = states.Launching;
                     launchChargeMultiplier = ((1 - transform.localScale.x) / (1 - sizeLowerLimit));
+                    rb.mass = 100;
+                    GetComponent<BoxCollider2D>().isTrigger = true;
                 }
                 break;
             case states.Launching:
@@ -96,19 +101,12 @@ public class ChargeControls : MonoBehaviour
         transform.localPosition = new Vector3(-0.222f + (newScale / 2), 0, 0);
     }
 
-    private void OnCollisionStay2D(Collision2D other) 
+    private void OnTriggerStay2D(Collider2D other) 
     {
         if( (other.gameObject.CompareTag("Hero") || other.gameObject.CompareTag("Enemy"))
             && (currentState == states.Launching || currentState == states.LaunchFreeze || currentState == states.Recharging))
         {
-            Launch(other.gameObject);
+            other.gameObject.GetComponent<LaunchBehaviour>().Launch(transform.right * launchPower * launchChargeMultiplier);
         }
-    }
-
-    public void Launch(GameObject launchable)
-    {
-        GetComponent<BoxCollider2D>().enabled = false;
-        Rigidbody2D rb = launchable.GetComponent<Rigidbody2D>();
-        rb.AddRelativeForce(transform.right * launchPower * launchChargeMultiplier);
     }
 }

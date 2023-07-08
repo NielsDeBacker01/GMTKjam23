@@ -7,6 +7,7 @@ TagManager:
   - Bar
   - Hero
   - Enemy
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Wall
   - IgnoreWall
   - Player
-  - 
-  - 
+  - Floor
+  - InAccesibleFloor
   - 
   - 
   - 
