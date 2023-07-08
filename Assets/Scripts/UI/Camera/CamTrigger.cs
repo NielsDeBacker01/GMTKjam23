@@ -15,12 +15,13 @@ public class CamTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Hero")
         {
             camCont.minPos += newCamPos;
             camCont.maxPos += newCamPos;
 
             collision.transform.position = newPlayerPos;
+            GameObject.FindGameObjectWithTag("Player").transform.position = newPlayerPos;
         }
     }
 }
