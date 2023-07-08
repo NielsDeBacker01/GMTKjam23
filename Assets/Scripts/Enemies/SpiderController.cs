@@ -20,9 +20,15 @@ public class SpiderController : MonoBehaviour
     private void FixedUpdate()
     {
         if (isFacingRight)
+        {
             transform.position += new Vector3(-0.2f, 0f, 0f);
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        }
         if (!isFacingRight)
+        {
             transform.position += new Vector3(0.2f, 0f, 0f);
+            transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        }
     }
 
 

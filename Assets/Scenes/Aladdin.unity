@@ -24593,37 +24593,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!1 &963706051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 963706052}
-  m_Layer: 0
-  m_Name: PivotPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &963706052
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963706051}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.02, y: 52.89, z: -0.12678361}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1039115885
 GameObject:
   m_ObjectHideFlags: 0
@@ -25725,6 +25694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1625523112}
     m_Modifications:
+    - target: {fileID: 1780823122, guid: e31f777c07bac9049b4a883e61db72c5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 776a0e49576f9324f954c7ae6ad24eda, type: 2}
     - target: {fileID: 8902170504904800737, guid: e31f777c07bac9049b4a883e61db72c5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -25773,7 +25746,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonL
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5968651434762281437, guid: e31f777c07bac9049b4a883e61db72c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e31f777c07bac9049b4a883e61db72c5, type: 3}
 --- !u!1 &1373386270
 GameObject:
@@ -26782,6 +26756,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1625523112}
     m_Modifications:
+    - target: {fileID: 2716914938661480823, guid: 13df336e34491834e9f8b441559340e7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ed2f8ea92d8ac1042a988c3c05dcd154, type: 2}
+    - target: {fileID: 2720620655098868525, guid: 13df336e34491834e9f8b441559340e7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2720620656021710852, guid: 13df336e34491834e9f8b441559340e7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -26829,6 +26811,18 @@ PrefabInstance:
     - target: {fileID: 2720620656021710853, guid: 13df336e34491834e9f8b441559340e7, type: 3}
       propertyPath: m_Name
       value: Spider
+      objectReference: {fileID: 0}
+    - target: {fileID: 3330983716168193632, guid: 13df336e34491834e9f8b441559340e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3330983716168193632, guid: 13df336e34491834e9f8b441559340e7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3330983716168193632, guid: 13df336e34491834e9f8b441559340e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.69
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13df336e34491834e9f8b441559340e7, type: 3}
@@ -26883,14 +26877,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5399575281075515477, guid: 21953f02be6c99f46aa6b2322a234cfb, type: 3}
-      propertyPath: spinSpeed
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399575281075515477, guid: 21953f02be6c99f46aa6b2322a234cfb, type: 3}
-      propertyPath: pivotPoint
-      value: 
-      objectReference: {fileID: 963706052}
     - target: {fileID: 5399575281075515483, guid: 21953f02be6c99f46aa6b2322a234cfb, type: 3}
       propertyPath: m_Name
       value: Bat
@@ -26952,5 +26938,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonR
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5968651434762281437, guid: e31f777c07bac9049b4a883e61db72c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e31f777c07bac9049b4a883e61db72c5, type: 3}
