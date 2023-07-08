@@ -16,5 +16,6 @@ public class BoneThrow : MonoBehaviour
     private void Update()
     {
         transform.eulerAngles += Vector3.forward * 10;
+        Destroy(this.gameObject, 5);
     }
 }
