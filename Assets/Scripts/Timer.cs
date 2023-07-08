@@ -11,16 +11,13 @@ public class Timer : MonoBehaviour
     private float timerValue = 59;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        counter += Time.fixedDeltaTime;    
-
-        if (counter <= 100000)
+        if (timerValue > 0)
         {
-            timerValue -= 1;
-            counter = 0;
+            timerValue -= Time.deltaTime;
         }
 
-        timerText.text = "00:" + timerValue.ToString();
+        timerText.text = "00:" + Mathf.Round(timerValue).ToString();
     }
 }
