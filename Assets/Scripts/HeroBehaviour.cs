@@ -7,7 +7,6 @@ public class HeroBehaviour : MonoBehaviour
     [SerializeField]
     [Range(0,1)]
     private float fallSpeed;
-
     [SerializeField]
     private float scale;
 

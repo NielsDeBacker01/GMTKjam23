@@ -103,7 +103,7 @@ public class ChargeControls : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other) 
     {
-        if( (other.gameObject.CompareTag("Hero") || other.gameObject.CompareTag("Enemy"))
+        if( other.gameObject.CompareTag("Hero")
             && (currentState == states.Launching || currentState == states.LaunchFreeze || currentState == states.Recharging))
         {
             other.gameObject.GetComponent<LaunchBehaviour>().Launch(transform.right * launchPower * launchChargeMultiplier);
