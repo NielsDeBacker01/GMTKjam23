@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class BatController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform pivotPoint;
+    public float spinSpeed;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.RotateAround(pivotPoint.position, Vector3.forward, spinSpeed * Time.deltaTime);
     }
 }
