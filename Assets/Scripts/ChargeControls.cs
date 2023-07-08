@@ -21,6 +21,9 @@ public class ChargeControls : MonoBehaviour
     private float sizeUpperLimit;
     [SerializeField]
     private float extendFreeze;
+    [SerializeField]
+    private float launchPower;
+    private float launchChargeMultiplier;
 
     private states currentState;
     private float cooldown;
@@ -36,6 +39,7 @@ public class ChargeControls : MonoBehaviour
         switch (currentState)
         {
             case states.Neutral:
+                GetComponent<BoxCollider2D>().enabled = true;
                 if(Input.GetKey(KeyCode.Space))
                 {
                     currentState = states.Charging;
@@ -54,13 +58,14 @@ public class ChargeControls : MonoBehaviour
                 else
                 {
                     currentState = states.Launching;
+                    launchChargeMultiplier = ((1 - transform.localScale.x) / (1 - sizeLowerLimit));
                 }
                 break;
             case states.Launching:
                 newScale = transform.localScale.x * (1+expandSpeed);
-                if(newScale > sizeUpperLimit)
+                if(newScale > 1 + ((sizeUpperLimit - 1) * launchChargeMultiplier))
                 {
-                    newScale = sizeUpperLimit;
+                    newScale = 1 + ((sizeUpperLimit - 1) * launchChargeMultiplier);
                     currentState = states.LaunchFreeze;
                     cooldown = extendFreeze;
                 }
@@ -89,5 +94,21 @@ public class ChargeControls : MonoBehaviour
     {
         transform.localScale = new Vector3(newScale, transform.localScale.y, transform.localScale.z);
         transform.localPosition = new Vector3(-0.222f + (newScale / 2), 0, 0);
+    }
+
+    private void OnCollisionStay2D(Collision2D other) 
+    {
+        if( (other.gameObject.CompareTag("Hero") || other.gameObject.CompareTag("Enemy"))
+            && (currentState == states.Launching || currentState == states.LaunchFreeze || currentState == states.Recharging))
+        {
+            Launch(other.gameObject);
+        }
+    }
+
+    public void Launch(GameObject launchable)
+    {
+        GetComponent<BoxCollider2D>().enabled = false;
+        Rigidbody2D rb = launchable.GetComponent<Rigidbody2D>();
+        rb.AddRelativeForce(transform.right * launchPower * launchChargeMultiplier);
     }
 }

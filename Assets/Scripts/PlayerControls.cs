@@ -22,7 +22,6 @@ public class PlayerControls : MonoBehaviour
         direction = 0;
         direction -= Input.GetKey(KeyCode.RightArrow) ? 1 : 0;
         direction += Input.GetKey(KeyCode.LeftArrow) ? 1 : 0;
-        print(direction);
     }
 
     void FixedUpdate() 
