@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &40537885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6517321246565583276, guid: bf2af48787cfb6b41b60baca47dc77e4, type: 3}
+  m_PrefabInstance: {fileID: 1400078459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &118064309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2720620656021710852, guid: 13df336e34491834e9f8b441559340e7, type: 3}
@@ -418,7 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8eacc9b700eb84181a2dff4412b2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 40537885}
   smoothSpeed: 0.05
   minPos: {x: 0, y: 0, z: -10}
   maxPos: {x: 0, y: 0, z: -10}
@@ -499,17 +504,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6539546236779360344, guid: 9e2c2c06e19c7204eb51fda8a77e20f4, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6539546236779360350, guid: 9e2c2c06e19c7204eb51fda8a77e20f4, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6539546236779360350, guid: 9e2c2c06e19c7204eb51fda8a77e20f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.82
+      value: -13.83
       objectReference: {fileID: 0}
     - target: {fileID: 6539546236779360350, guid: 9e2c2c06e19c7204eb51fda8a77e20f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 4.74
       objectReference: {fileID: 0}
     - target: {fileID: 6539546236779360350, guid: 9e2c2c06e19c7204eb51fda8a77e20f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -569,7 +578,7 @@ GameObject:
   - component: {fileID: 692971654}
   - component: {fileID: 692971653}
   - component: {fileID: 692971652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
