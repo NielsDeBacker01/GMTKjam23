@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -36,6 +37,5 @@ public class Timer : MonoBehaviour
  
         if (timerValue <= 0)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
     }
 }

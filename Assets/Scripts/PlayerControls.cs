@@ -22,6 +22,12 @@ public class PlayerControls : MonoBehaviour
         direction = 0;
         direction -= Input.GetKey(KeyCode.RightArrow) ? 1 : 0;
         direction += Input.GetKey(KeyCode.LeftArrow) ? 1 : 0;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+            movementSpeed = 10f;
+        else
+            movementSpeed = 5f;
+        
     }
 
     void FixedUpdate() 

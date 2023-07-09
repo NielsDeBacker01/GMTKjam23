@@ -9,12 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Main menu.unity
     guid: bf97b38089f57a745818aee0bbdf9ed0
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: d4171ff4e47b5b44c887a1e85dc5f439
+  - enabled: 1
+    path: Assets/Scenes/Aladdin.unity
+    guid: 73038eef0d0439341a1a6d69506b13b8
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 0a26a92bbfd77b24795b236b18423bb8
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: d65c5bf65da4bd34d8e4a535ebc7cdf9
+  - enabled: 1
+    path: Assets/Scenes/Outro.unity
+    guid: df9a3849fd070d040bdb5bfffffe9697
+  - enabled: 1
     path: Assets/Scenes/FullGame.unity
     guid: f558303636b319a4bafe6bb92a8197a9
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 0a26a92bbfd77b24795b236b18423bb8
-  - enabled: 0
-    path: Assets/Scenes/Aladdin.unity
-    guid: 73038eef0d0439341a1a6d69506b13b8
   m_configObjects: {}
