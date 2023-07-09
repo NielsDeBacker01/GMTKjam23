@@ -8,7 +8,9 @@ TagManager:
   - Hero
   - Enemy
   - Trap
-  - Goal
+  - Floor
+  - Timer
+  - MoveWall
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - Player
   - Floor
   - InAccesibleFloor
-  - 
-  - 
+  - TrueWall
+  - IgnoreTrueWall
   - 
   - 
   - 

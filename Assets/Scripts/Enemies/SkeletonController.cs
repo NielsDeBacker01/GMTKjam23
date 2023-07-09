@@ -6,6 +6,7 @@ public class SkeletonController : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bonePrefab;
+    public float cooldown;
     private float counter;
 
     // Update is called once per frame
@@ -13,7 +14,7 @@ public class SkeletonController : MonoBehaviour
     {
         counter += Time.deltaTime;
 
-        if (counter > 3)
+        if (counter > cooldown)
         {
             Throw();
             counter = 0;

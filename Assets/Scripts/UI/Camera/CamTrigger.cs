@@ -6,11 +6,15 @@ public class CamTrigger : MonoBehaviour
 {
     public Vector3 newCamPos, newPlayerPos;
     CamController camCont;
+    GameObject player;
+    GameObject wall;
 
     // Start is called before the first frame update
     void Start()
     {
         camCont = Camera.main.GetComponent<CamController>();   
+        player = GameObject.FindGameObjectWithTag("Player");
+        wall = GameObject.FindGameObjectWithTag("MoveWall");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,8 +24,11 @@ public class CamTrigger : MonoBehaviour
             camCont.minPos += newCamPos;
             camCont.maxPos += newCamPos;
 
-            collision.transform.position = newPlayerPos;
-            GameObject.FindGameObjectWithTag("Player").transform.position = newPlayerPos;
+            wall.transform.position += newCamPos;
+
+            collision.GetComponent<HeroBehaviour>().spawnPoint.position = newPlayerPos;
+            collision.GetComponent<HeroBehaviour>().Spawn(0);
+            player.transform.position = new Vector3(newPlayerPos.x + 2, newPlayerPos.y, newPlayerPos.z);
         }
     }
 }
