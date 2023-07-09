@@ -29,6 +29,7 @@ public class ChargeControls : MonoBehaviour
 
     private states currentState;
     private float cooldown;
+    public AudioSource m_AudioSource;
 
     void Awake()
     {
@@ -107,6 +108,7 @@ public class ChargeControls : MonoBehaviour
             && (currentState == states.Launching || currentState == states.LaunchFreeze || currentState == states.Recharging))
         {
             other.gameObject.GetComponent<LaunchBehaviour>().Launch(transform.right * launchPower * launchChargeMultiplier);
+            m_AudioSource.Play();
         }
     }
 }
