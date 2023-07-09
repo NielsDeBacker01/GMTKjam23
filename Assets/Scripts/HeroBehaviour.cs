@@ -70,6 +70,9 @@ public class HeroBehaviour : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         transform.localScale = new Vector3(scale, scale, scale);
         transform.position = spawnPoint.position;
-        timer.timerValue -= punishment;
+        if(timer.startTimer)
+        {
+            timer.timerValue -= punishment;
+        }
     }
 }
