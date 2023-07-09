@@ -21,6 +21,13 @@ public class HeroBehaviour : MonoBehaviour
     private Rigidbody2D rb;
     private LaunchBehaviour lb;
     private bool falling;
+    private AudioSource sfx;
+    private bool hasPlayed;
+
+    private void Start()
+    {
+        sfx = GetComponent<AudioSource>();
+    }
 
     void Awake()
     {
@@ -37,10 +44,16 @@ public class HeroBehaviour : MonoBehaviour
             if(transform.localScale.x > 0.3)
             {
                 FallAnimation();
+                if(hasPlayed == false)
+                {
+                    sfx.Play();
+                    hasPlayed = true;
+                }
             }
             else
             {
                 Spawn(timePunishment);
+                hasPlayed = false;
             }
         }
     }
