@@ -8,6 +8,8 @@ TagManager:
   - Hero
   - Enemy
   - Trap
+  - Floor
+  - Timer
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Player
   - Floor
   - InAccesibleFloor
-  - 
-  - 
+  - TrueWall
+  - IgnoreTrueWall
   - 
   - 
   - 
