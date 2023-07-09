@@ -9,16 +9,29 @@ public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     private float counter;
-    private float timerValue = 5;
+    public float timerValue = 5;
+    public bool startTimer;
 
+    private void Start() {
+        startTimer = false;
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        if (timerValue > 0)
+        if (timerValue > 0 && startTimer)
             timerValue -= Time.deltaTime;
 
-        timerText.text = "00:" + Mathf.Round(timerValue).ToString();
+        string seconds = (Mathf.Round(timerValue) % 60) < 10 ?
+            "0" + (Mathf.Round(timerValue) % 60) : 
+            (Mathf.Round(timerValue) % 60).ToString();
 
+        string minutes = Mathf.Floor(Mathf.Round(timerValue)/60) < 10 ? 
+            "0" + Mathf.Floor(Mathf.Round(timerValue)/60) : 
+            Mathf.Floor(Mathf.Round(timerValue)/60).ToString();
+
+        timerText.text = minutes + ":" + seconds;
+ 
         if (timerValue <= 0)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 

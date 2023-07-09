@@ -5,14 +5,18 @@ using UnityEngine;
 
 public class SpiderController : MonoBehaviour
 {
+    [SerializeField]
+    private float lowerLimit;
+    [SerializeField]
+    private float upperLimit;
     private bool isFacingRight = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x <= -10)
+        if (transform.position.x <= lowerLimit)
             isFacingRight = false;
-        if (transform.position.x >= 10)
+        if (transform.position.x >= upperLimit)
             isFacingRight = true;
 
     }

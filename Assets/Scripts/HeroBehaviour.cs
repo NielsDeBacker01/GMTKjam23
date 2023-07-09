@@ -11,7 +11,12 @@ public class HeroBehaviour : MonoBehaviour
     private float scale;
 
     [SerializeField]
-    private Transform spawnPoint;
+    public Transform spawnPoint;
+
+    [SerializeField]
+    public Timer timer;
+    [SerializeField]
+    private float timePunishment;
 
     private Rigidbody2D rb;
     private LaunchBehaviour lb;
@@ -21,11 +26,12 @@ public class HeroBehaviour : MonoBehaviour
     {
         lb = GetComponent<LaunchBehaviour>();
         rb = GetComponent<Rigidbody2D>(); 
-        Spawn();
+        Spawn(0);
     }
 
     void Update()
     {
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         if(falling == true)
         {
             if(transform.localScale.x > 0.3)
@@ -34,7 +40,7 @@ public class HeroBehaviour : MonoBehaviour
             }
             else
             {
-                Spawn();
+                Spawn(timePunishment);
             }
         }
     }
@@ -44,6 +50,11 @@ public class HeroBehaviour : MonoBehaviour
         {
             falling = true;
         }
+
+        if(other.gameObject.CompareTag("Enemy") && lb.flying == false)
+        {
+            Spawn(timePunishment);
+        }
     }
 
     private void FallAnimation()
@@ -51,12 +62,14 @@ public class HeroBehaviour : MonoBehaviour
         transform.localScale *= (1 - fallSpeed);
     }
 
-    private void Spawn()
+    public void Spawn(float punishment)
     {
         falling = false;
         lb.flying = false;
         rb.velocity = Vector2.zero;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         transform.localScale = new Vector3(scale, scale, scale);
         transform.position = spawnPoint.position;
+        timer.timerValue -= punishment;
     }
 }
