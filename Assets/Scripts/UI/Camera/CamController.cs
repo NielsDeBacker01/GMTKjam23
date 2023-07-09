@@ -23,7 +23,7 @@ public class CamController : MonoBehaviour
                 Mathf.Clamp(targetPos.z, minPos.z, maxPos.z));
 
             newPos = Vector3.Lerp(transform.position, camBoundaryPos, smoothSpeed);
-            transform.position = newPos;
+            transform.position = new Vector3(newPos.x, newPos.y, newPos.z);
         }
     }
 }

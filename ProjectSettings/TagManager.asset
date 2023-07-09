@@ -10,6 +10,7 @@ TagManager:
   - Trap
   - Floor
   - Timer
+  - MoveWall
   layers:
   - Default
   - TransparentFX

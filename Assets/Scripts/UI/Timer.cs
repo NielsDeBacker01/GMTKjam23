@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
     public float timerValue = 5;
     public bool startTimer;
 
-    private void Start() {
+    private void Awake() {
         startTimer = false;
     }
     
@@ -20,7 +20,9 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if (timerValue > 0 && startTimer)
+        {
             timerValue -= Time.deltaTime;
+        }
 
         string seconds = (Mathf.Round(timerValue) % 60) < 10 ?
             "0" + (Mathf.Round(timerValue) % 60) : 
