@@ -59,7 +59,7 @@ public class HeroBehaviour : MonoBehaviour
     }
 
     private void OnTriggerStay2D(Collider2D other) {
-        if(other.gameObject.CompareTag("Trap") && lb.flying == false)
+        if(other.gameObject.CompareTag("Trap") && lb.flying == false && falling == false)
         {
             falling = true;
         }
@@ -83,6 +83,9 @@ public class HeroBehaviour : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         transform.localScale = new Vector3(scale, scale, scale);
         transform.position = spawnPoint.position;
-        timer.timerValue -= punishment;
+        if(timer.startTimer)
+        {
+            timer.timerValue -= punishment;
+        }
     }
 }

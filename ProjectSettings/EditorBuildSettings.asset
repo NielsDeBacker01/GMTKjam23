@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: bf97b38089f57a745818aee0bbdf9ed0
   - enabled: 1
     path: Assets/Scenes/Intro.unity
-    guid: d4171ff4e47b5b44c887a1e85dc5f439
+    guid: e9257b641dfc8d54bbce5755c0f5f9dc
   - enabled: 1
     path: Assets/Scenes/Aladdin.unity
     guid: 73038eef0d0439341a1a6d69506b13b8
