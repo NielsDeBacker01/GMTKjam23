@@ -27213,6 +27213,7 @@ GameObject:
   - component: {fileID: 1373386271}
   - component: {fileID: 1373386274}
   - component: {fileID: 1373386273}
+  - component: {fileID: 1373386275}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -27237,7 +27238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 117, y: -22.899994}
+  m_AnchoredPosition: {x: 117, y: -22.900024}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373386273
@@ -27337,6 +27338,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373386270}
   m_CullTransparentMesh: 1
+--- !u!114 &1373386275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373386270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed57967c52645d390a89dcf8f61ba73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 4
+  SpeedMultiplier: 2
+  CurveScale: 1
 --- !u!1001 &1400078459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33518,7 +33534,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 26
-      m_TileSpriteIndex: 27
+      m_TileSpriteIndex: 29
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -35143,12 +35159,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 850350910, guid: 4f4de1f556288984d888c5fe100ad8f5, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 930258316, guid: 4f4de1f556288984d888c5fe100ad8f5, type: 3}
-  - m_RefCount: 68
-    m_Data: {fileID: -1497145427, guid: 4f4de1f556288984d888c5fe100ad8f5, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 68
+    m_Data: {fileID: -1497145427, guid: 4f4de1f556288984d888c5fe100ad8f5, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 930258316, guid: 4f4de1f556288984d888c5fe100ad8f5, type: 3}
   - m_RefCount: 380
     m_Data: {fileID: -1586543367, guid: 4f4de1f556288984d888c5fe100ad8f5, type: 3}
   m_TileMatrixArray:
