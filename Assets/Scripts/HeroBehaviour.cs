@@ -22,6 +22,7 @@ public class HeroBehaviour : MonoBehaviour
     private LaunchBehaviour lb;
     private bool falling;
     private AudioSource sfx;
+    public AudioSource sfx2;
     private bool hasPlayed;
 
     private void Start()
@@ -64,8 +65,9 @@ public class HeroBehaviour : MonoBehaviour
             falling = true;
         }
 
-        if(other.gameObject.CompareTag("Enemy") && lb.flying == false)
+        if(other.gameObject.CompareTag("Enemy"))
         {
+            sfx2.Play();
             Spawn(timePunishment);
         }
     }

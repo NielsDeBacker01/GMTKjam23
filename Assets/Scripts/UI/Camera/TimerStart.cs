@@ -5,10 +5,12 @@ using UnityEngine;
 public class TimerStart : MonoBehaviour
 {
     Timer timer;
+    GameObject controls;
     // Start is called before the first frame update
     void Start()
     {
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
+        controls = GameObject.FindGameObjectWithTag("Controls");
         timer.gameObject.SetActive(false);
     }
 
@@ -18,6 +20,7 @@ public class TimerStart : MonoBehaviour
         {
             timer.startTimer = true;
             timer.gameObject.SetActive(true);
+            controls.gameObject.SetActive(false);
         }
     }
 }

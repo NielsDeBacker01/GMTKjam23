@@ -496,7 +496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -126.68, y: 115}
+  m_AnchoredPosition: {x: -166, y: 223}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &262648453
@@ -951,6 +951,24 @@ MonoBehaviour:
   timerText: {fileID: 1718622489}
   timerValue: 5
   startTimer: 0
+--- !u!1 &546227253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6517321246565583268, guid: bf2af48787cfb6b41b60baca47dc77e4, type: 3}
+  m_PrefabInstance: {fileID: 810434728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &546227254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546227253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a24190d88c0de14094a24949e5eb3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioLevel: {fileID: 11400000, guid: 4bef9ac4d7593694594659a0103dd804, type: 2}
 --- !u!1001 &810434728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1915,6 +1933,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1994519458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6539546236779360355, guid: 9e2c2c06e19c7204eb51fda8a77e20f4, type: 3}
+  m_PrefabInstance: {fileID: 313627339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994519459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994519458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a24190d88c0de14094a24949e5eb3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioLevel: {fileID: 11400000, guid: 4bef9ac4d7593694594659a0103dd804, type: 2}
 --- !u!1 &2098190337
 GameObject:
   m_ObjectHideFlags: 0

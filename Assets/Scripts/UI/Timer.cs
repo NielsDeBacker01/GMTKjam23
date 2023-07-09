@@ -36,6 +36,6 @@ public class Timer : MonoBehaviour
         timerText.text = minutes + ":" + seconds;
  
         if (timerValue <= 0)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("GameOver");
     }
 }

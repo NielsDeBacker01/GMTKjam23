@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f2b40eaa511e0429ffa637764d306e, type: 3}
   m_Name: GameVolume
   m_EditorClassIdentifier: 
-  volume: 128
+  volume: 0.5

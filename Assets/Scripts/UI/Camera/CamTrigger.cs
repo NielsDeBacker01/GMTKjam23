@@ -29,6 +29,7 @@ public class CamTrigger : MonoBehaviour
             collision.GetComponent<HeroBehaviour>().spawnPoint.position = newPlayerPos;
             collision.GetComponent<HeroBehaviour>().Spawn(0);
             player.transform.position = new Vector3(newPlayerPos.x + 2, newPlayerPos.y, newPlayerPos.z);
+            player.transform.rotation = new Quaternion(0, 0, 0.7f, 0.7f);
         }
     }
 }

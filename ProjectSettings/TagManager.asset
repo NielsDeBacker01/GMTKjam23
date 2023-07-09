@@ -11,6 +11,7 @@ TagManager:
   - Floor
   - Timer
   - MoveWall
+  - Controls
   layers:
   - Default
   - TransparentFX
