@@ -8,6 +8,7 @@ TagManager:
   - Hero
   - Enemy
   - Trap
+  - Goal
   layers:
   - Default
   - TransparentFX

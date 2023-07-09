@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     private float counter;
-    private float timerValue = 5;
+    private float timerValue = 59;
 
     // Update is called once per frame
     void Update()
